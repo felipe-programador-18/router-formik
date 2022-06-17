@@ -6,11 +6,11 @@ const uf = ['RS','RJ','SC']
 
 // remermber i am create object with type of shape to validation my form
 const schema = yup.object().shape({
- name: yup.string().required('Por favor preencha o campo'),
+ name: yup.string().required('Por favor Prencha o campo'),
  email: yup.string().required('Por favor preencha o campo').email("Isso não é email!")
 })
 
-const from = () => {
+const PracticMore = () => {
 
     return(<>
     <h1>Practice about formik render!!!</h1>
@@ -28,21 +28,23 @@ const from = () => {
          
          <Form>
          <label> Name:
-           <Field type='name'  name='name' />
-           {errors.name && <p> {errors.name} </p> }
+           <Field  type={'name'}  name='name' />
+           {errors.name && touched.name ?  errors.name : ""}
         </label>
    
         <label> Email:
-           <Field type='email' name='email' />
+           <Field type={'email'} name='email' />
+           {errors.email && <p> {errors.email} </p>  }
         </label>
     
            <Field component='select' name='uf' >
-              <option> {uf.map(uf => <option key={uf} value={uf} > {uf} </option>  )} </option>
+               {uf.map(uf => <option key={uf} value={uf} > {uf} </option>  )} 
            </Field> 
            <Field type='checkbox' name='subscribe'/>
 
          <button>get Form</button> 
-            {JSON.stringify(values, null, 2)}
+
+         <pre> {JSON.stringify(values, null, 2)} </pre>
 
        </Form>
     )}
@@ -53,4 +55,4 @@ const from = () => {
 }
 
 
-export default from
+export default PracticMore
