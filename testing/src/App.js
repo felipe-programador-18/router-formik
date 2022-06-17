@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
+import PracticMore from './form';
 import Testing from './Morek/testing';
 
 const TestHere = () => {
@@ -17,16 +18,14 @@ function App() {
   return (
     
     <>
-    <Testing/>
+   
     <h1>Practice more about routers</h1>
-     <Routes>
-       
-      <Route path='*' element={<TestHere/>} />
+     <Routes> 
+      <Route path='/' element={<TestHere/>} />
       <Route path='/testing' element={<Testing/>} />
       
-     
-     </Routes>
-   
+      </Routes>
+      <PracticMore/>
   </> 
   );
 }
