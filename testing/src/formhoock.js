@@ -2,10 +2,11 @@ import React from "react"
 import * as yup from 'yup'
 import { useFormik } from "formik"
 
+
 const uf =['RS','SP', 'SC','RJ']
 
 const schema = yup.object().shape({
-    name: yup.string().required("Field fill Please"),
+    name: yup.string().required("Field fill Please") ,
     email: yup.string().required("Field fill Please").email('This not is email')
 })
 
@@ -43,11 +44,13 @@ const StructurForm = () => {
         <form  onSubmit={form.handleSubmit} >
             
             <label> Name:
-                <input name='name' type='email' value={form.values.name}  onChange={form.handleChange} onBlur={form.handleBlur} />
+                <input name='name' type='name' value={form.values.name}  onChange={form.handleChange} onBlur={form.handleBlur} />
+                {form.errors.name && form.touched.name ? form.errors.name : ""}
             </label>
            
            <label> Email:
                 <input name='email' type='email'  value={form.values.email} onChange={form.handleChange} onBlur={form.handleBlur} />
+                {form.errors.email && form.touched.email ? form.erros.email : '' }
            </label>
                   
 
@@ -61,8 +64,8 @@ const StructurForm = () => {
 
 
              <pre> {JSON.stringify(form.values, null, 2)} </pre>
-
-
+            <pre> {JSON.stringify(form.touched, null,2)} </pre>
+                
         </form>
   
   
