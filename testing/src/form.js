@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import * as yup from 'yup'
 import {Formik, Form, Field} from 'formik'
 
@@ -24,8 +24,9 @@ const PracticMore = () => {
      }} validationSchema={schema} 
      
      > 
+
     {({values, errors, touched}) => (
-         
+        
          <Form>
          <label> Name:
            <Field  type={'name'}  name='name' />
