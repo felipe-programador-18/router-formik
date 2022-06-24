@@ -6,28 +6,32 @@ import PracticMore from './form';
 import StructurForm from './formhoock';
 import Testing from './Morek/testing';
 import HomeAdding from './pages/Home';
+import NavNav from './component/Navbar';
+
 
 const TestHere = () => {
   return (<>
    <h1>good aftermoon testing here!!!</h1>
    <Link to={'/testing'} > To Testing now </Link>
+   <Link to={'/Navbar'} > go on to nav </Link>
   </>)
 }
 
 
 function App() {
+  
+ 
   return (
     
     <>
    
-    <h1>Practice more about routers</h1>
-  
+    <h1>Practice more about routers</h1>    
      <Routes> 
+     
        <Route path='/' element={<TestHere/>} />
        <Route path='/testing' element={<Testing/>} />
        <Route path='/Home' element={<HomeAdding/>} /> 
-
-
+      
       </Routes>
       <PracticMore/>
 
