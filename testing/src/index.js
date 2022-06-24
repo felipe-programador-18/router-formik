@@ -7,6 +7,7 @@ import reportWebVitals from './reportWebVitals';
 import { Routes, Route } from 'react-router';
 import Testing from './Morek/testing';
 import HomeAdding from './pages/Home';
+import NavNav from './component/Navbar';
 
 //everything that adding or created new router I have passed here
 
@@ -14,6 +15,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
+    <NavNav/>
      <Routes>
       <Route path='/' element={<App/>} />
       <Route path='/testing' element={<Testing/>}    /> 
