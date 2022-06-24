@@ -4,3 +4,21 @@
 p{
   color: red;
 }
+
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+nav a {
+  color: green;
+  margin:0 10px;
+  padding: 5px ;
+  text-decoration: none;
+}
+
+
+nav a:hover {
+  color:blue
+}
