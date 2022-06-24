@@ -1,11 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import { Routes, Route } from 'react-router-dom';
-
 import './App.css';
 import PracticMore from './form';
 import StructurForm from './formhoock';
 import Testing from './Morek/testing';
+import HomeAdding from './pages/Home';
 
 const TestHere = () => {
   return (<>
@@ -21,14 +21,18 @@ function App() {
     <>
    
     <h1>Practice more about routers</h1>
+  
      <Routes> 
-      <Route path='/' element={<TestHere/>} />
-      <Route path='/testing' element={<Testing/>} />
-      
+       <Route path='/' element={<TestHere/>} />
+       <Route path='/testing' element={<Testing/>} />
+       <Route path='/Home' element={<HomeAdding/>} /> 
+
+
       </Routes>
       <PracticMore/>
 
       <StructurForm/>
+    
   </> 
   );
 }
