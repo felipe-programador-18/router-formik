@@ -5,8 +5,10 @@ const NavNav = () => {
   return(<>
   <nav> 
     <Link to={'/'} >Home</Link>
-    <Link to={'/testing'} >Testing</Link>
-    <Link to={''} >Formulario de user</Link>
+    <Link to={'/search'}>Pesquisa</Link>
+    <Link to={'/formularioone'} >Formulario de user1</Link>
+    <Link to={'/formulariotwo'} >Formulario de user 2</Link>
+
   </nav>
   
   </>)
