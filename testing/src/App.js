@@ -4,11 +4,12 @@ import './App.css';
 import PracticMore from './pages/form';
 import StructurForm from './pages/formhoock';
 import NavNav from './component/Navbar';
-import Search from './component/Search';
+import {Search} from './component/Search';
 import Home from './pages/Home';
 import InfoProducts from './pages/Infoproducts';
 import Notfound from './pages/Notfound';
 import Product from './pages/Product';
+import Searchbar from './pages/Searchbar';
 
 
 
@@ -22,13 +23,14 @@ function App() {
     <>
    
     <BrowserRouter>
-      <NavNav/>   
+      <NavNav/>
+      <Search/>   
         <Routes> 
          <Route path='/' element={ <Home/>} />
          <Route path='/formularioone' element={<PracticMore/>} /> 
          <Route path='/formulariotwo' element={<StructurForm/>} /> 
          {/* create router about search to simulation aobut api */ }
-         <Route path='/search'  element={<Search/>} /> 
+         <Route path='/search'  element={<Searchbar/> } /> 
          
          {/*create infoproducts router dynamic */}
          <Route path='/products/:id' element={<Product/> }   />
