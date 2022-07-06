@@ -1,8 +1,8 @@
 import {useState, useEffect} from 'react'
 
-const url = 'http://localhost:3000/products'
+//const url = 'http://localhost:3000/products'
 
-export const useFecthing = () => {
+export const useFecthing = (url) => {
    const[data, setData] = useState(null)
    const [setting, setSetting] = useState(null)
    const[method, setMethod] = useState(null)
