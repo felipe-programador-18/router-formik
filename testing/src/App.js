@@ -1,21 +1,13 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
-import PracticMore from './form';
-import StructurForm from './formhoock';
+import PracticMore from './pages/form';
+import StructurForm from './pages/formhoock';
 import Testing from './Morek/testing';
-import HomeAdding from './pages/Home';
 import NavNav from './component/Navbar';
 
 
-const TestHere = () => {
-  return (<>
-   <h1>good aftermoon testing here!!!</h1>
-   <Link to={'/testing'} > To Testing now </Link>
-   <Link to={'/Navbar'} > go on to nav </Link>
-  </>)
-}
+
 
 
 function App() {
@@ -28,9 +20,9 @@ function App() {
     <h1>Practice more about routers</h1>    
      <Routes> 
      
-       <Route path='/' element={<TestHere/>} />
+       <Route path='/' element={''} />
        <Route path='/testing' element={<Testing/>} />
-       <Route path='/Home' element={<HomeAdding/>} /> 
+       <Route path='/' element={''} /> 
       
       </Routes>
       <PracticMore/>
