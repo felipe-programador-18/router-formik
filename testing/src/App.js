@@ -1,10 +1,11 @@
 import React from 'react'
-import { Routes, Route } from 'react-router-dom';
+import { BrowserRouter,Routes, Route } from 'react-router-dom';
 import './App.css';
 import PracticMore from './pages/form';
 import StructurForm from './pages/formhoock';
-import Testing from './Morek/testing';
 import NavNav from './component/Navbar';
+import Search from './component/Search';
+import Home from './pages/Home';
 
 
 
@@ -17,17 +18,18 @@ function App() {
     
     <>
    
-    <h1>Practice more about routers</h1>    
-     <Routes> 
-     
-       <Route path='/' element={''} />
-       <Route path='/testing' element={<Testing/>} />
-       <Route path='/' element={''} /> 
-      
-      </Routes>
-      <PracticMore/>
+    <BrowserRouter>
+      <NavNav/>   
+        <Routes> 
+         <Route path='/' element={ <Home/>} />
+         <Route path='/formularioone' element={<PracticMore/>} /> 
+         <Route path='/formulariotwo' element={<StructurForm/>} /> 
+       
+         <Route path='/search'  element={<Search/>} /> 
 
-      <StructurForm/>
+        </Routes>
+  
+    </BrowserRouter>
     
   </> 
   );
