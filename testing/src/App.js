@@ -10,6 +10,7 @@ import InfoProducts from './pages/Infoproducts';
 import Notfound from './pages/Notfound';
 import Product from './pages/Product';
 import Searchbar from './pages/Searchbar';
+import { Contextprovider } from './Context/context';
 
 
 
@@ -21,7 +22,7 @@ function App() {
   return (
     
     <>
-   
+   <Contextprovider>
     <BrowserRouter>
       <NavNav/>
       <Search/>   
@@ -43,7 +44,7 @@ function App() {
         </Routes>
   
     </BrowserRouter>
-    
+    </Contextprovider>
   </> 
   );
 }
