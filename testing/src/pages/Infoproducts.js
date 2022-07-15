@@ -1,5 +1,6 @@
 import React from 'react'
-import { useParams } from 'react-router'
+import { useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const InfoProducts = () => {
     
@@ -12,8 +13,9 @@ const InfoProducts = () => {
       <h1>More information about Products!! {id} </h1>
          <h2>This product is lot good, also have price much affordable for you acquiring!!</h2>
          <h3>This product is very interesting for you wanna traning or improve your health running!!</h3>
-
-
+       
+       <Link to={"/newsearch"} > go on to search! </Link>  
+               
   </>)
 }
 
