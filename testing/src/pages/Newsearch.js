@@ -1,5 +1,6 @@
 import React from 'react'
 import { useFecthing } from '../hoock/useFetching'
+import { Trysearch } from '../component/newsearchpore'
 
 import { useSearchParams } from 'react-router-dom'
 
@@ -11,7 +12,9 @@ const Newsearch = () => {
   const {data:items, loading, error} = useFecthing(url)
   console.log("testing more code inside newsearch ", items)
 
-return(<>
+return(<>  
+         <Trysearch/>
+                 
            {loading && <p> Loading search .... </p> }
          
          {items &&  items.map((item) => (<div key={item.id} >
