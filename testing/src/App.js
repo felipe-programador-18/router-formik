@@ -11,6 +11,7 @@ import Notfound from './pages/Notfound';
 import Product from './pages/Product';
 import Searchbar from './pages/Searchbar';
 import { Contextprovider } from './Context/context';
+import Newsearch from './pages/Newsearch';
 
 
 
@@ -33,6 +34,7 @@ function App() {
          {/* create router about search to simulation aobut api */ }
          <Route path='/search'  element={<Searchbar/> } /> 
          
+         <Route  path='/newsearch' element={<Newsearch/> } />
          {/*create infoproducts router dynamic */}
          <Route path='/products/:id' element={<Product/> }   />
          <Route path='/products/:id/info'  element={<InfoProducts/>}  />  
